@@ -1,0 +1,1 @@
+python -c "import base64, sys; domain = 'yandex.ru'; q = b'\x00\x00\x01\x00\x00\x01\x00\x00\x00\x00\x00\x00' + bytes([len(domain)]) + domain.encode() + b'\x00\x00\x01\x00\x01'; print(base64.urlsafe_b64encode(q).decode().rstrip('='))"
